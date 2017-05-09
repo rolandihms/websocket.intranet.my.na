@@ -1,0 +1,461 @@
+attachments,attach_id,int,int(10) unsigned,,1
+attachments,bus_id,int,int(9) unsigned,,2
+attachments,user_id,int,int(9),,3
+attachments,msg_id,int,int(11) unsigned,,4
+attachments,type,varchar,varchar(25),,5
+attachments,attach_file,varchar,varchar(245),,6
+attachments,title,varchar,varchar(245),,7
+attachments,listing_date,timestamp,timestamp,,8
+attachments,status,varchar,varchar(25),,9
+chat,chat_id,int,int(10) unsigned,,1
+chat,bus_id,int,int(9) unsigned,,2
+chat,user_id,int,int(9) unsigned,,3
+chat,recipient_id,int,int(11),,4
+chat,chat_room_id,int,int(9) unsigned,,5
+chat,message,tinytext,tinytext,,6
+chat,list_time,timestamp,timestamp,,7
+chat,status,varchar,varchar(25),,8
+chat_rooms,chat_room_id,int,int(9) unsigned,,1
+chat_rooms,bus_id,int,int(9) unsigned,,2
+chat_rooms,user_id,int,int(9) unsigned,,3
+chat_rooms,user,text,text,,4
+chat_rooms,type,varchar,varchar(25),,5
+chat_rooms,status,varchar,varchar(25),,6
+ci_sessions,session_id,varchar,varchar(40),,1
+ci_sessions,ip_address,varchar,varchar(45),,2
+ci_sessions,user_agent,varchar,varchar(120),,3
+ci_sessions,last_activity,int,int(10) unsigned,,4
+ci_sessions,user_data,text,text,,5
+comments,comment_id,int,int(9) unsigned,,1
+comments,bus_id,int,int(9) unsigned,,2
+comments,user_id,int,int(9) unsigned,,3
+comments,item_id,int,int(9) unsigned,,4
+comments,comment_body,text,text,,5
+comments,listing_date,timestamp,timestamp,,6
+comments,type,varchar,varchar(245),,7
+comments,active,enum,enum('Y','N'),,8
+comments,status,varchar,varchar(25),,9
+companies,company_id,int,int(6) unsigned,,1
+companies,bus_id,int,int(9) unsigned,,2
+companies,company,varchar,varchar(245),,3
+companies,tagline,varchar,varchar(500),,4
+companies,description,text,text,,5
+companies,tel,varchar,varchar(15),,6
+companies,fax,varchar,varchar(15),,7
+companies,email,varchar,varchar(245),,8
+companies,url,varchar,varchar(245),,9
+companies,physical_address,tinytext,tinytext,,10
+companies,postal_address,varchar,varchar(500),,11
+companies,logo,varchar,varchar(245),,12
+companies,active,enum,enum('Y','N'),,13
+companies,status,varchar,varchar(25),,14
+departments,department_id,int,int(4) unsigned,,1
+departments,bus_id,int,int(9) unsigned,,2
+departments,department,varchar,varchar(245),,3
+departments,slug,varchar,varchar(245),,4
+discussion,discussion_id,int,int(9) unsigned,,1
+discussion,bus_id,int,int(9) unsigned,,2
+discussion,user_id,int,int(9) unsigned,,3
+discussion,item_id,int,int(9) unsigned,,4
+discussion,discussion_body,text,text,,5
+discussion,listing_date,timestamp,timestamp,,6
+discussion,type,varchar,varchar(245),,7
+discussion,active,enum,enum('Y','N'),,8
+discussion,status,varchar,varchar(25),,9
+email_attach,ea_id,int,int(11) unsigned,,1
+email_attach,bus_id,int,int(11) unsigned,,2
+email_attach,msg_id,int,int(11) unsigned,,3
+email_attach,attach_id,int,int(11) unsigned,,4
+events,event_id,int,int(11) unsigned,,1
+events,bus_id,int,int(11) unsigned,,2
+events,user_id,int,int(11) unsigned,,3
+events,board_id,int,int(9) unsigned,,4
+events,type,enum,enum('internal','public'),,5
+events,title,varchar,varchar(245),,6
+events,description,text,text,,7
+events,startdate,datetime,datetime,,8
+events,enddate,datetime,datetime,,9
+events,starttime,time,time,,10
+events,endtime,time,time,,11
+events,allday,enum,enum('true','false'),,12
+events,url,varchar,varchar(245),,13
+events,flag,varchar,varchar(245),,14
+events,status,varchar,varchar(245),,15
+event_boardrooms,board_id,int,int(9) unsigned,,1
+event_boardrooms,bus_id,int,int(9) unsigned,,2
+event_boardrooms,user_id,int,int(9) unsigned,,3
+event_boardrooms,boardroom,varchar,varchar(245),,4
+event_boardrooms,description,text,text,,5
+event_boardrooms,slug,varchar,varchar(245),,6
+fnf_reports,report_id,int,int(11) unsigned,,1
+fnf_reports,bus_id,int,int(11) unsigned,,2
+fnf_reports,user_id,int,int(11) unsigned,,3
+fnf_reports,activity,varchar,varchar(245),,4
+fnf_reports,activity_date,date,date,,5
+fnf_reports,method,text,text,,6
+fnf_reports,topic,varchar,varchar(245),,7
+fnf_reports,facility,varchar,varchar(245),,8
+fnf_reports,directorates,varchar,varchar(245),,9
+fnf_reports,region,varchar,varchar(245),,10
+fnf_reports,m_attendants,int,int(6),,11
+fnf_reports,f_attendants,int,int(6) unsigned,,12
+fnf_reports,location,varchar,varchar(245),,13
+fnf_reports,age_group,varchar,varchar(245),,14
+fnf_reports,posters,int,int(6) unsigned,,15
+fnf_reports,leaflets,int,int(6) unsigned,,16
+fnf_reports,videos,int,int(6) unsigned,,17
+fnf_reports,manuals,int,int(6) unsigned,,18
+fnf_reports,condoms,int,int(6) unsigned,,19
+fnf_reports,hct_m,int,int(6) unsigned,,20
+fnf_reports,hct_f,int,int(6) unsigned,,21
+fnf_reports,refer,text,text,,22
+fnf_reports,refer_topic,varchar,varchar(245),,23
+fnf_reports,refer_m,int,int(6) unsigned,,24
+fnf_reports,refer_f,int,int(6) unsigned,,25
+fnf_reports,money_spent,varchar,varchar(245),,26
+fnf_reports,comments,text,text,,27
+fnf_reports,listing_date,timestamp,timestamp,,28
+forum_categories,forum_cat_id,int,int(9) unsigned,,1
+forum_categories,bus_id,int,int(9) unsigned,,2
+forum_categories,user_id,int,int(9) unsigned,,3
+forum_categories,category,varchar,varchar(245),,4
+forum_categories,slug,varchar,varchar(245),,5
+galleries,gallery_id,int,int(9) unsigned,,1
+galleries,bus_id,int,int(9) unsigned,,2
+galleries,user_id,int,int(9) unsigned,,3
+galleries,title,varchar,varchar(245),,4
+galleries,description,text,text,,5
+galleries,listing_date,timestamp,timestamp,,6
+galleries,style,tinyint,tinyint(2) unsigned,,7
+galleries,slug,varchar,varchar(245),,8
+galleries,tags,text,text,,9
+galleries,active,enum,enum('Y','N'),,10
+gallery_images,galimg_id,int,int(9) unsigned,,1
+gallery_images,bus_id,int,int(9) unsigned,,2
+gallery_images,gallery_id,int,int(9) unsigned,,3
+gallery_images,image_id,int,int(9) unsigned,,4
+groups,group_id,int,int(9) unsigned,,1
+groups,bus_id,int,int(9) unsigned,,2
+groups,user_id,int,int(9) unsigned,,3
+groups,title,varchar,varchar(245),,4
+groups,description,text,text,,5
+groups,listing_date,timestamp,timestamp,,6
+groups,slug,varchar,varchar(245),,7
+groups,active,enum,enum('Y','N'),,8
+group_items,gi_id,int,int(9) unsigned,,1
+group_items,bus_id,int,int(9) unsigned,,2
+group_items,group_id,int,int(9) unsigned,,3
+group_items,type,varchar,varchar(245),,4
+group_items,item,int,int(9) unsigned,,5
+group_users,gu_id,int,int(9) unsigned,,1
+group_users,bus_id,int,int(9) unsigned,,2
+group_users,group_id,int,int(9) unsigned,,3
+group_users,user_id,int,int(9) unsigned,,4
+images,image_id,int,int(9) unsigned,,1
+images,bus_id,int,int(9) unsigned,,2
+images,user_id,int,int(9) unsigned,,3
+images,title,varchar,varchar(245),,4
+images,description,text,text,,5
+images,img_file,varchar,varchar(245),,6
+images,listing_date,timestamp,timestamp,,7
+images,tags,text,text,,8
+images,active,enum,enum('Y','N'),,9
+info_feed,feed_id,int,int(11) unsigned,,1
+info_feed,bus_id,int,int(11) unsigned,,2
+info_feed,title,varchar,varchar(245),,3
+info_feed,info_box,text,text,,4
+info_feed,url,varchar,varchar(245),,5
+info_feed,type,varchar,varchar(245),,6
+info_feed,listing_date,timestamp,timestamp,,7
+info_feed,type_id,int,int(11) unsigned,,8
+messages,msg_id,int,int(11) unsigned,,1
+messages,bus_id,int,int(11) unsigned,,2
+messages,user_id,int,int(11) unsigned,,3
+messages,nameFrom,varchar,varchar(245),,4
+messages,emailFrom,varchar,varchar(245),,5
+messages,emailTo,text,text,,6
+messages,emailCC,text,text,,7
+messages,emailBCC,text,text,,8
+messages,subject,varchar,varchar(245),,9
+messages,body,text,text,,10
+messages,status,enum,enum('draft','sent','archive','trash','inbox','folder'),,11
+messages,opened,enum,enum('Y','N'),,12
+messages,flag,enum,enum('Y','N'),,13
+messages,date_sent,timestamp,timestamp,,14
+news_categories,news_cat_id,int,int(9) unsigned,,1
+news_categories,bus_id,int,int(9) unsigned,,2
+news_categories,user_id,int,int(9) unsigned,,3
+news_categories,category,varchar,varchar(245),,4
+news_categories,slug,varchar,varchar(245),,5
+organisations,org_id,int,int(11) unsigned,,1
+organisations,bus_id,int,int(11) unsigned,,2
+organisations,organisation,varchar,varchar(245),,3
+organisations,type,varchar,varchar(245),,4
+organisations,contact_person,varchar,varchar(245),,5
+organisations,contact_title,varchar,varchar(245),,6
+organisations,postal_address,varchar,varchar(245),,7
+organisations,physical_address,varchar,varchar(245),,8
+organisations,email_address,varchar,varchar(245),,9
+organisations,website,varchar,varchar(245),,10
+organisations,lat,varchar,varchar(50),,11
+organisations,long,varchar,varchar(50),,12
+organisations,region,varchar,varchar(100),,13
+organisations,town,varchar,varchar(100),,14
+organisations,suburb,varchar,varchar(100),,15
+organisations,services1,text,text,,16
+organisations,services2,text,text,,17
+organisations,services3,text,text,,18
+organisations,iec,varchar,varchar(5),,19
+organisations,m_condoms,varchar,varchar(5),,20
+organisations,f_condoms,varchar,varchar(5),,21
+organisations,sm_m_condoms,varchar,varchar(5),,22
+organisations,sm_f_condoms,varchar,varchar(5),,23
+organisations,refer_condoms,varchar,varchar(5),,24
+organisations,msm_prevention,varchar,varchar(5),,25
+organisations,csw_prevention,varchar,varchar(5),,26
+organisations,migrants_prevention,varchar,varchar(5),,27
+organisations,prisoners_prevention,varchar,varchar(5),,28
+organisations,plhiv_reduction,varchar,varchar(5),,29
+organisations,mc_education,varchar,varchar(5),,30
+organisations,infant_counselling,varchar,varchar(5),,31
+organisations,pmtct_education,varchar,varchar(5),,32
+organisations,pep_education,varchar,varchar(5),,33
+organisations,sti_education,varchar,varchar(5),,34
+organisations,sti_treatment,varchar,varchar(5),,35
+organisations,blood_safety,varchar,varchar(5),,36
+organisations,medical_safety,varchar,varchar(5),,37
+organisations,care_support_treatment,varchar,varchar(5),,38
+organisations,nutritional_support,varchar,varchar(5),,39
+organisations,treatment_literacy_art,varchar,varchar(5),,40
+organisations,counselling,varchar,varchar(5),,41
+organisations,avoid_reinfection,varchar,varchar(5),,42
+organisations,hivtb,varchar,varchar(5),,43
+organisations,sensitation_hivtb,varchar,varchar(5),,44
+organisations,defaulter_tracing,varchar,varchar(5),,45
+organisations,art_referrals,varchar,varchar(5),,46
+organisations,adherance_support,varchar,varchar(5),,47
+organisations,art_literacy,varchar,varchar(5),,48
+organisations,comm_hbc,varchar,varchar(5),,49
+organisations,psych_support,varchar,varchar(5),,50
+organisations,nutrition_support,varchar,varchar(5),,51
+organisations,human_rights,varchar,varchar(5),,52
+organisations,hiv_impact_services,varchar,varchar(5),,53
+organisations,iga_small_grants,varchar,varchar(5),,54
+organisations,comm_garden,varchar,varchar(5),,55
+organisations,livestock_poultry,varchar,varchar(5),,56
+organisations,ovc_material,varchar,varchar(5),,57
+organisations,ovc_psych,varchar,varchar(5),,58
+organisations,ovc_education,varchar,varchar(5),,59
+organisations,ovc_nutrition,varchar,varchar(5),,60
+organisations,legal_protection,varchar,varchar(5),,61
+organisations,iec_on_legal,varchar,varchar(5),,62
+organisations,nutrition_support_hh,varchar,varchar(5),,63
+organisations,comm_gardens_hh,varchar,varchar(5),,64
+organisations,training_food_hh,varchar,varchar(5),,65
+pages,page_id,int,int(9),,1
+pages,bus_id,int,int(9),,2
+pages,user_id,int,int(9) unsigned,,3
+pages,heading,varchar,varchar(250),,4
+pages,title,varchar,varchar(300),,5
+pages,page_body,text,text,,6
+pages,slug,varchar,varchar(300),,7
+pages,listing_date,timestamp,timestamp,,8
+pages,feature_img,varchar,varchar(245),,9
+pages,metaD,text,text,,10
+pages,metaT,text,text,,11
+pages,status,varchar,varchar(10),,12
+pages,page_parent,int,int(9),,13
+pages,page_sequence,int,int(9),,14
+pages,page_template,varchar,varchar(10),,15
+pages,pass,varchar,varchar(50),,16
+posts,post_id,int,int(9) unsigned,,1
+posts,bus_id,int,int(9) unsigned,,2
+posts,user_id,int,int(9) unsigned,,3
+posts,title,varchar,varchar(245),,4
+posts,heading,varchar,varchar(245),,5
+posts,post_body,text,text,,6
+posts,listing_date,timestamp,timestamp,,7
+posts,feature_img,varchar,varchar(245),,8
+posts,metaD,tinytext,tinytext,,9
+posts,metaT,varchar,varchar(245),,10
+posts,slug,varchar,varchar(245),,11
+posts,tags,text,text,,12
+posts,active,enum,enum('Y','N'),,13
+posts,comments,enum,enum('Y','N'),,14
+posts,pass,varchar,varchar(50),,15
+posts,broadcast,varchar,varchar(50),,16
+posts,status,varchar,varchar(25),,17
+post_cats,post_cat_id,int,int(9) unsigned,,1
+post_cats,bus_id,int,int(9) unsigned,,2
+post_cats,post_id,int,int(9) unsigned,,3
+post_cats,cat_id,int,int(9) unsigned,,4
+quick_chat,quick_chat_id,int,int(9) unsigned,,1
+quick_chat,bus_id,int,int(9) unsigned,,2
+quick_chat,user_id,int,int(9) unsigned,,3
+quick_chat,user,text,text,,4
+quick_chat,type,varchar,varchar(25),,5
+quick_chat,status,varchar,varchar(25),,6
+resources,resource_id,int,int(10) unsigned,,1
+resources,bus_id,int,int(9) unsigned,,2
+resources,user_id,int,int(9),,3
+resources,category_id,int,int(9) unsigned,,4
+resources,type,varchar,varchar(50),,5
+resources,title,varchar,varchar(245),,6
+resources,description,text,text,,7
+resources,privelages,text,text,,8
+resources,res_file,varchar,varchar(245),,9
+resources,listing_date,timestamp,timestamp,,10
+resources,tags,text,text,,11
+resources,tools,enum,enum('Y','N'),,12
+resources,active,enum,enum('Y','N'),,13
+resources,pass,varchar,varchar(50),,14
+resources,status,varchar,varchar(25),,15
+resource_categories,res_cat_id,int,int(9) unsigned,,1
+resource_categories,bus_id,int,int(9) unsigned,,2
+resource_categories,user_id,int,int(9) unsigned,,3
+resource_categories,category,varchar,varchar(245),,4
+resource_categories,slug,varchar,varchar(245),,5
+scratch_plays,ID,int,int(11),,1
+scratch_plays,CLIENT_ID,int,int(11),,2
+scratch_plays,PRIZE_IMAGE_URL,varchar,varchar(255),,3
+scratch_plays,PRIZE_FK,int,int(11),,4
+scratch_plays,PROMOTION_ID,int,int(11),,5
+scratch_plays,CREATED_AT,datetime,datetime,,6
+scratch_plays,COUPON,varchar,varchar(400),,7
+scratch_prizes,ID,int,int(11),,1
+scratch_prizes,NAME,varchar,varchar(255),,2
+scratch_prizes,DESCRIPTION,varchar,varchar(500),,3
+scratch_prizes,IMAGE_URL,varchar,varchar(255),,4
+scratch_prizes,QUANTITY,int,int(11),,5
+scratch_prizes,FREQUENTLY,int,int(11),,6
+scratch_prizes,PROMOTION_ID,int,int(11),,7
+scratch_prizes,IS_ACTIVE,int,int(1),,8
+scratch_prizes,CREATED_AT,datetime,datetime,,9
+scratch_prizes,CREATED_BY,bigint,bigint(20),,10
+scratch_prizes,UPDATED_AT,datetime,datetime,,11
+scratch_prizes,UPDATED_BY,bigint,bigint(20),,12
+scratch_promotion,ID,int,int(11),,1
+scratch_promotion,BUSINESS_ID,int,int(10),,2
+scratch_promotion,NAME,varchar,varchar(255),,3
+scratch_promotion,BODY,text,text,,4
+scratch_promotion,START_DATE,datetime,datetime,,5
+scratch_promotion,END_DATE,datetime,datetime,,6
+scratch_promotion,IS_ACTIVE,varchar,varchar(1),,7
+scratch_promotion,CREATED_AT,timestamp,timestamp,,8
+scratch_promotion,CREATED_BY,bigint,bigint(20),,9
+scratch_promotion,UPDATED_AT,datetime,datetime,,10
+scratch_promotion,UPDATED_BY,bigint,bigint(20),,11
+scratch_promotion,THROTTLE,varchar,varchar(5),,12
+scratch_tmp_winners,ID,int,int(11),,1
+scratch_tmp_winners,CLIENT_ID,int,int(11),,2
+scratch_tmp_winners,PROMOTION_ID,int,int(11),,3
+scratch_tmp_winners,DATETIME,timestamp,timestamp,,4
+scratch_winners,ID,int,int(11),,1
+scratch_winners,CLIENT_ID,int,int(11),,2
+scratch_winners,PRIZE_ID,int,int(11),,3
+scratch_winners,PROMOTION_ID,int,int(11),,4
+scratch_winners,HAS_CLAIMED,int,int(11),,5
+scratch_winners,CREATED_AT,datetime,datetime,,6
+scratch_winners,CREATED_BY,bigint,bigint(20),,7
+scratch_winners,UPDATED_AT,datetime,datetime,,8
+scratch_winners,UPDATED_BY,bigint,bigint(20),,9
+scratch_winners,COUPON,varchar,varchar(100),,10
+settings,settings_id,int,int(9) unsigned,,1
+settings,bus_id,int,int(9) unsigned,,2
+settings,title,varchar,varchar(245),,3
+settings,tag_line,varchar,varchar(245),,4
+settings,description,tinytext,tinytext,,5
+settings,contact_email,varchar,varchar(245),,6
+settings,url,varchar,varchar(245),,7
+settings,logo,varchar,varchar(245),,8
+settings,theme,varchar,varchar(245),,9
+subscribers,subscriber_id,int,int(11) unsigned,,1
+subscribers,bus_id,int,int(11) unsigned,,2
+subscribers,name,varchar,varchar(100),,3
+subscribers,surname,varchar,varchar(100),,4
+subscribers,phone,varchar,varchar(100),,5
+subscribers,email,varchar,varchar(245),,6
+subscribers,dob,date,date,,7
+subscribers,gender,enum,enum('M','F','N'),,8
+subscribers,user,varchar,varchar(50),,9
+subscribers,pass,varchar,varchar(245),,10
+subscribers,online,enum,enum('Y','N'),,11
+surveys,bus_id,int,int(11),,1
+surveys,survey_id,int,int(11),,2
+surveys,creator,varchar,varchar(8),,3
+surveys,title,varchar,varchar(300),,4
+surveys,description,text,text,,5
+surveys,datetime,datetime,datetime,,6
+surveys,datetime_end,datetime,datetime,,7
+surveys,url,varchar,varchar(200),,8
+surveys,slug,varchar,varchar(250),,9
+surveys,type,varchar,varchar(10),,10
+surveys,status,varchar,varchar(10),,11
+survey_feedback,feedback_id,int,int(11),,1
+survey_feedback,survey_id,int,int(11),,2
+survey_feedback,bus_id,int,int(11),,3
+survey_feedback,answer,text,text,,4
+survey_feedback,type,varchar,varchar(20),,5
+survey_feedback,name,varchar,varchar(250),,6
+survey_feedback,email,varchar,varchar(250),,7
+survey_feedback,cell,varchar,varchar(12),,8
+survey_feedback,age,varchar,varchar(2),,9
+survey_feedback,datetime,timestamp,timestamp,,10
+survey_questions,question_id,int,int(11),,1
+survey_questions,survey_id,int,int(11),,2
+survey_questions,questions,varchar,varchar(250),,3
+survey_questions,help_text,text,text,,4
+survey_questions,answers,text,text,,5
+survey_questions,type,varchar,varchar(20),,6
+survey_questions,sequence,int,int(11),,7
+topics,topic_id,int,int(9) unsigned,,1
+topics,bus_id,int,int(9) unsigned,,2
+topics,user_id,int,int(9) unsigned,,3
+topics,title,varchar,varchar(245),,4
+topics,heading,varchar,varchar(245),,5
+topics,topic_body,text,text,,6
+topics,listing_date,timestamp,timestamp,,7
+topics,feature_img,varchar,varchar(245),,8
+topics,metaD,tinytext,tinytext,,9
+topics,metaT,varchar,varchar(245),,10
+topics,slug,varchar,varchar(245),,11
+topics,tags,text,text,,12
+topics,active,enum,enum('Y','N'),,13
+topics,discussion,enum,enum('Y','N'),,14
+topics,pass,varchar,varchar(50),,15
+topics,status,varchar,varchar(25),,16
+topic_categories,news_cat_id,int,int(9) unsigned,,1
+topic_categories,bus_id,int,int(9) unsigned,,2
+topic_categories,user_id,int,int(9) unsigned,,3
+topic_categories,category,varchar,varchar(245),,4
+topic_categories,slug,varchar,varchar(245),,5
+topic_cats,topic_cat_id,int,int(9) unsigned,,1
+topic_cats,bus_id,int,int(9) unsigned,,2
+topic_cats,topic_id,int,int(9) unsigned,,3
+topic_cats,cat_id,int,int(9) unsigned,,4
+users,user_id,int,int(9) unsigned,,1
+users,client_id,int,int(9) unsigned,,2
+users,bus_id,int,int(9) unsigned,,3
+users,title,varchar,varchar(10),,4
+users,fname,varchar,varchar(245),,5
+users,sname,varchar,varchar(245),,6
+users,gender,enum,enum('M','F'),,7
+users,email,varchar,varchar(245),,8
+users,tel,varchar,varchar(15),,9
+users,cell,varchar,varchar(15),,10
+users,dob,date,date,,11
+users,region,varchar,varchar(245),,12
+users,avatar,varchar,varchar(245),,13
+users,last_login,timestamp,timestamp,,14
+users,active,enum,enum('Y','N'),,15
+users,status,varchar,varchar(25),,16
+users,pass,varchar,varchar(245),,17
+users,online,enum,enum('Y','N'),,18
+users,session_id,varchar,varchar(100),,19
+user_roles,role_id,int,int(9) unsigned,,1
+user_roles,user_id,int,int(9) unsigned,,2
+user_roles,bus_id,int,int(9) unsigned,,3
+user_roles,department_id,int,int(4) unsigned,,4
+user_roles,roles,text,text,,5
+user_roles,position,varchar,varchar(245),,6
+user_roles,fnf_position,varchar,varchar(245),,7

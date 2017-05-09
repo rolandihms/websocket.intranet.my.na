@@ -10,4 +10,4 @@ RUN cd /tmp \
 
 EXPOSE 8888
 
-CMD ["python", "/server.py"]
+CMD ["python", "server.py"]
