@@ -4,7 +4,7 @@ import threading
 
 def dbconnection():
     #return MySQLdb.connect(host="mysql16706-intranet.cloudhosting.rsaweb.co.za", user='root', passwd='XILlpt02567', use_unicode=True)
-    return MySQLdb.connect(host="localhost", user='root', passwd='', use_unicode=True)
+    return MySQLdb.connect(host="127.0.0.1", user='root', passwd='', use_unicode=True)
 
 class DBPoller(object):
     db = dbconnection()
