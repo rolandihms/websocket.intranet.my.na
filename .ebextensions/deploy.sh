@@ -22,6 +22,7 @@ copy_ext $SCRIPT_PATH/files/99_restart_services.sh /opt/elasticbeanstalk/hooks/r
 script_add_line /opt/python/etc/supervisord.conf "include" "[include]"
 script_add_line /opt/python/etc/supervisord.conf "websocket.conf" "files=websocket.conf "
 
+
 #start
 sudo /usr/local/bin/supervisord -c /opt/python/etc/supervisord.conf
 # Reread the supervisord config
