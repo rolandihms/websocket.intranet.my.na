@@ -24,7 +24,7 @@ script_add_line /opt/python/etc/supervisord.conf "websocket.conf" "files=websock
 
 
 #start
-sudo /usr/local/bin/supervisord -c /opt/python/etc/supervisord.conf
+#sudo /usr/local/bin/supervisord -c /opt/python/etc/supervisord.conf
 # Reread the supervisord config
 sudo /usr/local/bin/supervisorctl -c /opt/python/etc/supervisord.conf reread
 # Update supervisord in cache without restarting all services
