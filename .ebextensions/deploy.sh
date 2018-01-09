@@ -22,9 +22,11 @@ copy_ext $SCRIPT_PATH/files/99_restart_services.sh /opt/elasticbeanstalk/hooks/r
 script_add_line /opt/python/etc/supervisord.conf "include" "[include]"
 script_add_line /opt/python/etc/supervisord.conf "websocket.conf" "files=websocket.conf "
 
+#start
+sudo /usr/local/bin/supervisord -c /opt/python/etc/supervisord.conf
 # Reread the supervisord config
-supervisorctl -c /opt/python/etc/supervisord.conf reread
+sudo /usr/local/bin/supervisorctl -c /opt/python/etc/supervisord.conf reread
 # Update supervisord in cache without restarting all services
-supervisorctl -c /opt/python/etc/supervisord.conf update
+sudo /usr/local/bin/supervisorctl -c /opt/python/etc/supervisord.conf update
 # Start/Restart celeryd through supervisord
-supervisorctl -c /opt/python/etc/supervisord.conf restart websocket
+sudo /usr/local/bin/supervisorctl -c /opt/python/etc/supervisord.conf restart websocket
