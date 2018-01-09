@@ -3,6 +3,7 @@ import time
 import threading
 
 def dbconnection():
+    #return MySQLdb.connect(host="node4752-env-3905003.p4d.click", user='root', passwd='XzPFmf32pY', use_unicode=True)
     return MySQLdb.connect(host="nmh-db-1-cluster.cluster-cxonbylt4aio.eu-west-1.rds.amazonaws.com", user='root', passwd='OANdyn14784', use_unicode=True)
     #return MySQLdb.connect(host="127.0.0.1", user='root', passwd='', use_unicode=True)
 

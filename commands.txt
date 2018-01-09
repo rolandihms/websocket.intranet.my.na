@@ -3,3 +3,8 @@ docker build -t intranet-socket .
 docker run -p 8000:8000 -t intranet-socket
 
  docker run --rm -it --net=host mysql mysql -h 127.0.0.1 -uroot -p
+
+
+pip install tornado
+pip install mysql-python
+pip install mysqlclient
